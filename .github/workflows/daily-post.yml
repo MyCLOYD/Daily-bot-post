@@ -1,0 +1,20 @@
+name: Daily Telegram Post
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 16 * * *"
+      timezone: "Asia/Tehran"
+
+jobs:
+  send-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send dot to Telegram
+        env:
+          TOKEN: ${{ secrets.8994698668:AAGW1q5Y5AUxLeXsuuZEiHef3s5kjasBIg4 }}
+        run: |
+          curl --fail --silent --show-error \
+            -X POST "https://api.telegram.org/bot${TOKEN}/sendMessage" \
+            -d "chat_id=@im682" \
+            --data-urlencode "text=."
