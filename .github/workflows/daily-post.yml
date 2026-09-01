@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Send dot to Telegram
         env:
-          TOKEN: ${{ secrets.8994698668:AAGW1q5Y5AUxLeXsuuZEiHef3s5kjasBIg4 }}
+          TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         run: |
           curl --fail --silent --show-error \
             -X POST "https://api.telegram.org/bot${TOKEN}/sendMessage" \
