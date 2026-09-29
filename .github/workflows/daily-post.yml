@@ -20,5 +20,5 @@ jobs:
             --data-urlencode "text=."
           curl --fail --silent --show-error \
             -X POST "https://api.telegram.org/bot${TOKEN}/sendMessage" \
-                        -d "chat_id=@Rlove0" \
-                                    --data-urlencode "text=."
+            -d "chat_id=@Rlove0" \
+            --data-urlencode "text=."
