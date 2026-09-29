@@ -5,7 +5,7 @@ on:
   schedule:
     - cron: "20 21 * * *"
       timezone: "Asia/Tehran"
-    - cron: "0 8 * * *"
+    - cron: "0 9 * * *"
       timezone: "Asia/Tehran"
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
             --data-urlencode "text=."
 
   send-morning:
-    if: github.event.schedule == '0 8 * * *'
+    if: github.event.schedule == '0 9 * * *'
     runs-on: ubuntu-latest
     steps:
       - name: Send dot to Rlove0
